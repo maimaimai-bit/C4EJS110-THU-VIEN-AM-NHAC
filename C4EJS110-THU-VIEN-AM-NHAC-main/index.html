@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Viện Âm Nhạc</title>
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <script src="https://kit.fontawesome.com/dfb7590c37.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body id="body">
+    <!-- Hello, this is header -->
+
+    <div id="header" class="animate__animated animate__fadeInDown">
+        <div id="listMenuID" class="listMenu">
+            <ul>
+                <li class="theLoaiID">
+                    <p>Thể loại</p>
+                    <ol class="theLoai viewTL">
+                    </ol>
+                </li>
+                <li class="uploadID">Đăng bài hát</li>
+                <li class="requestID">Yêu cầu bài hát</li>
+                <li class="suggestionID">Góp ý</li>
+                <li class="loginID">Đăng nhập</li>
+                <li class="accountID">
+                    <p class="nameDisplay">Tên người dùng</p>
+                    <ol class="account viewAccount">
+                        <li class="yeuThichID">Danh sách yêu thích</li>
+                        <li class="signoutID">Đăng xuất</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div class="leftHeader">
+            <i class="iconHeader fa fa-bars" id="iconMenu" onclick="showMenu()"></i>
+            <a id="logo" class="viewLogo"><i class="fas fa-headphones-alt"></i> THƯ VIỆN ÂM NHẠC</a>
+            <div id="viewSearchID" class="viewSearch">
+                <input type="search" id="searchHomePage" placeholder="Tìm theo bài hát hoặc ca sĩ" autocomplete="off">
+                <ol id="searchMusic">
+                </ol>
+            </div>
+            <i class="viewIconSearch iconHeader fa fa-search" id="iconSearch" onclick="viewSearchHeader()"></i>
+        </div>
+        <div class="rightHeader" id="rightMenuID">
+            <a class="accountID">
+                <p class="nameDisplay">Tên người dùng</p>
+                <ol class="account">
+                    <li class="yeuThichID">Danh sách yêu thích</li>
+                    <li class="signoutID">Đăng xuất</li>
+                </ol>
+            </a>
+            <a class="loginID">Đăng nhập</a>
+            <a class="suggestionID">Góp ý</a>
+            <a class="requestID">Yêu cầu bài hát</a>
+            <a class="uploadID">Đăng bài hát</a>
+            <a class="theLoaiID">
+                <p>Thể loại</p>
+                <ol class="theLoai">
+                </ol>
+            </a>
+        </div>
+    </div>
+
+
+
+    <!-- Hello, this is trang chu -->
+    <div id="homepage" class="container">
+        <div id="banner">
+            <div id="bannertext">
+                <h2><i class="fas fa-headphones-alt"></i> THƯ VIỆN ÂM NHẠC</h2>
+                <p id="des">Hệ thống chia sẻ nhạc lớn nhất Việt Nam. Hàng trăm bài hát mới mỗi tuần.</p>
+            </div>
+        </div>
+        <div class="homePageContent">
+            <div class="listHomePage theLoaiContent">
+                <img src="https://uphinh.vn/images/2021/05/08/2474b858edc40799059753a08d05555b.png" alt="logo thu vien am nhac" id="logoHomePage">
+                <div id="theLoaiContent">
+                    <div>
+                        <h1 class="headingclickable"></h1>
+                    </div>
+                    <div class="body xephang">
+                        <ol id="musicTheLoai">
+                        </ol>
+                        <!-- <div class="xemthem" id="xemThemMusicsTheLoai">
+                            <p>Xem thêm</p>
+                        </div> -->
+                        <div id="changemusicTheLoai" class="changeList">
+                            <p id="countmusicTheLoai" class="countList">1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="listHomePage">
+                <div>
+                    <h1 class="headingclickable">Top 100 bài hát hay nhất</h1>
+                </div>
+                <div class="body xephang">
+                    <ol id="musicHayNhat">
+                    </ol>
+                    <!-- <div class="xemthem" id="xemThemHayNhat">
+                        <p>Xem thêm</p>
+                    </div> -->
+                    <div id="changemusicHayNhat" class="changeList">
+                        <p id="countmusicHayNhat" class="countList">1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- day la page music -->
+
+    <div id="pageMusic" class="container">
+        <div class="pageMusicContent">
+            <div class="pageMusicLeft">
+                <div class="titlePageMusic">
+                    <a class="nameMusic"></a>&ensp;
+                    <a class="singerTitleMusic"></a>
+                    <div class="iframePageMusic">
+                        <iframe src="" width="620px" height="320px" frameborder="0" allowfullscreen
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+                <div class="infoMusic">
+                    <a><strong>Sáng tác: </strong></a>
+                    <a class="authorMusic"></a><br>
+                    <a><strong>Lời bài hát: </strong></a>
+                    <hr>
+                    <p class="lyricsMusic"></p>
+                    <div>
+                    </div>
+                </div>
+            </div>
+            <div class="pageMusicRight">
+                <div id="musicSameGenre">
+                    <div>
+                        <h1 class="headingclickable"></h1>
+                    </div>
+                    <div class="body xephang">
+                        <ol id="musicSame">
+                        </ol>
+                        <!-- <div class="xemthem" id="xemThemMusicsSame">
+                            <p>Xem thêm</p>
+                        </div> -->
+                        <div id="changemusicSame" class="changeList">
+                            <p id="countmusicSame" class="countList">1</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="logoPageMusic">
+                    <img src="https://uphinh.vn/images/2021/05/08/2474b858edc40799059753a08d05555b.png" alt="logo thu vien am nhac">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- day la page danh sach yeu thich -->
+    <div id="YTMusic" class="container">
+        <div class="pageMusicContent" id="pageYT">
+            <div class="pageMusicLeft" id="pageYTLeft">
+                <div class="titlePageMusic" id="titleYT">
+                    <a class="nameMusic" id="nameYT"></a>&ensp;
+                    <a class="singerTitleMusic" id="singerYT"></a>
+                    <div class="iframePageMusic" id="iframeYT">
+                        <iframe src="" width="620px" height="320px" frameborder="0" allowfullscreen
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+                <div class="infoMusic" id="infoYT">
+                    <a><strong>Sáng tác: </strong></a>
+                    <a class="authorMusic" id="authorYT"></a><br>
+                    <a><strong>Lời bài hát: </strong></a>
+                    <hr>
+                    <p class="lyricsMusic" id="lyricsYT"></p>
+                    <div>
+                    </div>
+                </div>
+            </div>
+            <div class="pageMusicRight" id="pageYTRight">
+                <!-- phan bai hat yeu thich cua user -->
+                <div id="yeuThichContent">
+                    <div>
+                        <h1 class="headingclickable">Danh sách yêu thích</h1>
+                    </div>
+                    <div class="body xephang">
+                        <ol id="musicYeuThich">
+                        </ol>
+                        <p id="countMusicYT">...Chưa có bài hát nào trong danh sách yêu thích...</p>
+                        <!-- <div class="xemthem" id="xemThemYeuThich">
+                            <p>Xem thêm</p>
+                        </div> -->
+                        <div id="changemusicYeuThich" class="changeList">
+                            <p id="countmusicYeuThich" class="countList">1</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- phan bai hat yeu thich cua user -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Hello, this is dang bai hat -->
+    <div id="dangbaihat" class="containerfeatures">
+        <div class="huongdan">
+            <div>
+                <h1 class="heading">Hướng dẫn</h1>
+            </div>
+            <div class="body">
+                <p>
+                    <strong>Cảm ơn bạn rất nhiều!</strong>
+                    <br>
+                    Vì đã cùng những thành viên khác đóng góp vào Thư Viện Âm Nhạc. Cộng đồng yêu âm nhạc cần những
+                    người như bạn.
+                    <br>
+                    <br>
+                    <strong>Để bài đăng của bạn nhanh được duyệt nhất, hãy...</strong>
+                    <br>
+                    - Điền lời bài hát đầy đủ
+                    <br>
+                    - Bao gồm file nhạc mp3, wav hoặc ogg
+                    <br>
+                    - Thể loại, giúp phân loại bài hát
+                    <br>
+                    - Thông tin ca sĩ, tác giả đúng và đủ
+                    <br>
+                    <br>
+                    <em>Xin cảm ơn bạn đã đóng góp!</em>
+                </p>
+            </div>
+        </div>
+        <div id="upload">
+            <div>
+                <h1 class="heading">Đăng bài hát mới</h1>
+            </div>
+            <form class="body">
+                <div class="inputleft">
+                    <p>Tên bài hát <span style="color:red">*</span></p>
+                    <input class="halfinput" type="text" placeholder="Ví dụ: Cát Bụi" id="nameUpload">
+                    <p>Ca sĩ/Ban nhạc</p>
+                    <input class="halfinput" type="text" placeholder="Ví dụ: Cẩm Ly, Đan Trường" id="singerUpload">
+                </div>
+                <div class="inputright">
+                    <p>Thể loại</p>
+                    <input class="halfinput" type="text" placeholder="Ví dụ: Nhạc Vàng" id="genreUpload">
+                    <p>Tác giả</p>
+                    <input class="halfinput" type="text" placeholder="Ví dụ: Trịnh Công Sơn" id="authorUpload">
+                </div>
+                <div class="clearfloat">
+                    <p id="linkadd">Link bài hát <span style="color:red">*</span></p>
+                    <input class="longinput" type="text" placeholder="Điền link hợp lệ bạn nhé!" id="linkUpload">
+                    <p id="lyricsadd">Lời bài hát</p>
+                    <textarea class="longtextarea" id="lyricsUpload"></textarea>
+                    <p id="uploadResult" class="result"></p>
+                </div>
+            </form>
+            <div class="center">
+                <button id="addUpload" class="button1">Đăng bài hát</button>
+            </div>
+        </div>
+    </div>
+    <!-- Hello, this is yeu cau bai hat -->
+    <div id="yeucaubaihat" class="containerfeatures">
+        <div class="huongdan">
+            <div>
+                <h1 class="heading">Hướng dẫn</h1>
+            </div>
+            <div class="body">
+                <p>
+                    <strong>Bạn chưa tìm thấy bài hát mình yêu thích?</strong>
+                    <br>
+                    Hãy gửi cho Thư Viện một yêu cầu, và chúng mình sẽ cố gắng nhất có thể để thêm bài hát đó vào hệ
+                    thống! Thư Viện Âm Nhạc luôn trong quá trình làm giàu và đa dạng hóa. Bạn cũng có thể tự thêm bài
+                    hát lên Thư Viện.
+                    <br>
+                    <br>
+                    <strong>Để yêu cầu bài hát bạn mong muốn, hãy...</strong>
+                    <br>
+                    - Điền đủ tên bài hát cùng tên ca sĩ
+                    <br>
+                    - Nhớ viết đúng chính tả nhé
+                    <br>
+                    - Cho Thư Viện khoảng thời gian 7-10 ngày để xử lý yêu cầu của bạn nha!
+                    <br>
+                    <br>
+                    <em>Xin cảm ơn bạn đã đóng góp!</em>
+                </p>
+            </div>
+        </div>
+        <div id="request">
+            <div>
+                <h1 class="heading">Yêu cầu bài hát mới</h1>
+            </div>
+            <form class="body inputdiv">
+                <p class="longp">Tên bài hát <span style="color:red">*</span></p>
+                <input class="longinput" type="text" placeholder="Ví dụ: One Thing" id="nameRequest">
+                <p class="longp">Ca sĩ/Ban nhạc <span style="color:red">*</span></p>
+                <input class="longinput" type="text" placeholder="Ví dụ: One Direction" id="singerAuthorRequest">
+                <p id="requestResult" class="result"></p>
+            </form>
+            <div class="center">
+                <button id="addRequest" class="button1">Yêu cầu bài hát</button>
+            </div>
+        </div>
+    </div>
+    <!-- Hello, this is lien he gop y -->
+    <div id="lienhegopy" class="containerfeatures">
+        <div class="huongdan">
+            <div>
+                <h1 class="heading">HƯỚNG DẪN</h1>
+            </div>
+            <div class="body">
+                <p>
+                    <strong>Bạn có điều gì muốn nói với Thư Viện?</strong>
+                    <br>
+                    Thư Viện luôn sẵn sàng tiếp nhận mọi đóng góp, liên lạc từ các bạn - cho dù đó là một lỗi trên trang
+                    web, một tính năng các bạn muốn cập nhật thêm, hay những trao đổi "for work."
+                    <br>
+                    <br>
+                    <strong>Để liên lạc nhanh nhất với Thư Viện, hãy...</strong>
+                    <br>
+                    - Điền địa chỉ e-mail bạn muốn nhận phản hồi
+                    <br>
+                    - Ghi đầy đủ chủ đề thư để chúng mình xử lý nhanh nhất nhé!
+                    <br>
+                    - Cho Thư Viện khoảng thời gian để liên lạc lại với bạn nha
+                    <br>
+                    <br>
+                    <em>Xin cảm ơn bạn đã liên hệ!</em>
+                </p>
+            </div>
+        </div>
+        <div id="suggestion">
+            <div>
+                <h1 class="heading">Soạn thư</h1>
+            </div>
+            <form class="body inputdiv">
+                <p class="longp">Địa chỉ E-mail của bạn <span style="color:red">*</span></p>
+                <input class="longinput" type="text" placeholder="Hãy điền địa chỉ hợp lệ nhé!" id="emailSuggestion">
+                <p class="longp">Chủ đề thư</p>
+                <input class="longinput" type="text" placeholder="Ví dụ: V/v quảng cáo trên website"
+                    id="subjectSuggestion">
+                <p class="longp">Nội dung thư <span style="color:red">*</span></p>
+                <textarea class="longtextarea" id="contentSuggestion"></textarea>
+                <p id="suggestionResult" class="result"></p>
+            </form>
+            <div class="center">
+                <button id="addSuggestion" class="button1">Gửi thư</button>
+            </div>
+        </div>
+    </div>
+    <!-- Hello, this is dang nhap -->
+    <div id="dangnhap" class="containerfeatures">
+        <div class="huongdan">
+            <div>
+                <h1 class="heading">HƯỚNG DẪN</h1>
+            </div>
+            <div class="body">
+                <p>
+                    <strong>Hãy đăng nhập hoặc đăng ký tài khoản để...</strong>
+                    <br>
+                    - Lưu các bài hát yêu thích
+                    <br>
+                    - Tạo và chia sẻ playlists cá nhân
+                    <br>
+                    - Theo dõi, tương tác cùng tài khoản bạn bè
+                    <br>
+                    - Tham gia cộng đồng Thư Viện lớn mạnh
+                    <br>
+                    <br>
+                    <em>Quá trình đăng ký vô cùng đơn giản, dễ dàng!</em>
+                </p>
+            </div>
+        </div>
+        <div id="login">
+            <div>
+                <h1 class="heading">Đăng nhập</h1>
+            </div>
+            <form class="body">
+                <div class="flex">
+                    <p class="loginp">Tên đăng nhập</p>
+                    <input class="inputFillShort" type="text" placeholder="Enter username or e-mail" id="userName">
+                </div>
+                <div class="flex">
+                    <p class="loginp">Mật khẩu</p>
+                    <input class="inputFillShort" type="password" placeholder="Enter password" id="passWord">
+                </div>
+                <div>
+                    <p id="forgetpass" style="text-align: right;">Quên mật khẩu?</p>
+                </div>
+                <div style="text-align: left;">
+                    <p class="loginp">Hoặc đăng nhập với</p>
+                    <p id="loginwith"><i class="fab fa-facebook"></i> <i class="fab fa-google"></i></p>
+                </div>
+                <p id="loginResult" class="result"></p>
+            </form>
+            <div class="center">
+                <button id="addLogin" class="button1">Đăng nhập</button>
+                &nbsp;
+                <button class="signupID button2">Đăng ký ngay</button>
+            </div>
+        </div>
+    </div>
+    <!-- Hi, this is dang ky -->
+    <div id="dangky" class="containerfeatures">
+        <div class="huongdan">
+            <div>
+                <h1 class="heading">HƯỚNG DẪN</h1>
+            </div>
+            <div class="body">
+                <p>
+                    <strong>Hãy đăng nhập hoặc đăng ký tài khoản để...</strong>
+                    <br>
+                    - Lưu các bài hát yêu thích
+                    <br>
+                    - Tạo và chia sẻ playlists cá nhân
+                    <br>
+                    - Theo dõi, tương tác cùng tài khoản bạn bè
+                    <br>
+                    - Tham gia cộng đồng Thư Viện lớn mạnh
+                    <br>
+                    <br>
+                    <em>Quá trình đăng ký vô cùng đơn giản, dễ dàng!</em>
+                </p>
+            </div>
+        </div>
+        <div id="signup">
+            <div>
+                <h1 class="heading">Đăng ký</h1>
+            </div>
+            <form class="body">
+                <div class="flex">
+                    <p class="loginp">Điền e-mail</p>
+                    <input class="inputFillShort" type="text" placeholder="Enter e-mail" id="emailSignup">
+                </div>
+                <div class="flex">
+                    <p class="loginp">Tên đăng nhập</p>
+                    <input class="inputFillShort" type="text" placeholder="Create username" id="usernameSignup">
+                </div>
+                <div class="flex">
+                    <p class="loginp">Mật khẩu</p>
+                    <input class="inputFillShort" type="password" placeholder="Create password" id="passwordSignup">
+                </div>
+                <div style="text-align: left;">
+                    <p class="loginp">Hoặc đăng ký với</p>
+                    <p id="loginwith"><i class="fab fa-facebook"></i> <i class="fab fa-google"></i></p>
+                </div>
+                <p id="signupResult" class="result"></p>
+            </form>
+            <div class="center">
+                <button id="addSignup" class="button1">Tạo tài khoản</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Phần mọi người làm / Page Admin-->
+
+
+    <div id="adminHomePage">
+        <div id="chooseMenu">
+            <ul>
+                <li id="musicsAdminID">Thư viện bài hát</li>
+                <li id="uploadAdminID">Đăng bài hát</li>
+                <li id="requestAdminID">Yêu cầu bài hát</li>
+                <li id="suggestionAdminID">Liên hệ góp ý</li>
+                <li id="logOutAdminID">Thoát</li>
+            </ul>
+        </div>
+        <div id="content">
+
+            <!--Page quản lý thư viện nhạc - Hoàng Mai-->
+            <div id="musicsAdmin" class="contentAdmin">
+                <p class="titleContent">Quản lý thư viện bài hát</p>
+                <div id="MusicContent">
+                    <form style="display: flex; flex-direction: column;">
+                        <div style="display: flex; flex-direction: row;">
+                            <div style="display: flex; flex-direction: column;">
+                                <label for="nameMusicAdmin">Tên bài hát:</label>
+                                <input class="halfinputAdmin" type="text" id="nameMusicAdmin" placeholder="name...">
+                                <label for="authorMusicAdmin">Sáng tác:</label>
+                                <input class="halfinputAdmin" type="text" id="authorMusicAdmin" placeholder="author...">
+                            </div>
+                            <div style="display: flex; flex-direction: column;">
+                                <label for="singerMusicAdmin">Ca sĩ:</label>
+                                <input class="halfinputAdmin" type="text" id="singerMusicAdmin" placeholder="singer...">
+                                <label for="genreMusicAdmin">Thể loại:</label>
+                                <input class="halfinputAdmin" type="text" id="genreMusicAdmin" placeholder="genre...">
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column;">
+                            <label for="iframeMusicAdmin">Iframe Url:</label>
+                            <input class="longinputAdmin" type="text" id="iframeMusicAdmin" placeholder="iframeUrl...">
+                            <label for="lyricsMusicAdmin">Lời bài hát:</label>
+                            <textarea class="longtextareaAdmin" id="lyricsMusicAdmin"
+                                placeholder="lyrics..."></textarea>
+                        </div>
+                    </form>
+                    <p id="resultMusicAdmin"></p>
+                    <div id="buttonMusicAdmin" style="display: flex; flex-direction: row;">
+                        <button id="clearMusicAdmin" class="clearAdmin">Clear</button>
+                        <button id="addMusicAdmin">Add</button>
+                    </div>
+                    <div id="filter">
+                        <label for="searchID">Tìm kiếm:</label>
+                        <input type="text" class="halfinputAdmin" id="searchID" placeholder="Tên bài hát or ca sĩ..."
+                            autocomplete="off">
+                        <label for="filterAdminMusic">Thể Loại:</label>
+                        <select id="filterAdminMusic" form="filterForm" name="genreList">
+                            <option value="all">Tất cả</option>
+                        </select>
+                    </div>
+                    <table class="tableContent">
+                        <tr>
+                            <th>Tên bài hát</th>
+                            <th>Chức năng</th>
+                        </tr>
+                    </table>
+                    <div id="changePageMusic" class="change">
+                        <p id="countPageMusic" class="countPage">1</p>
+                    </div>
+                </div>
+                <p id="noDataMusic" class="noData">Không có dữ liệu</p>
+            </div>
+
+
+            <!--Page quản lý đăng bài hát - Vũ Hoàng Việt Dũng-->
+            <div id="uploadAdmin" class="contentAdmin">
+                <p class="titleContent">Quản lý đăng bài hát</p>
+                <div id="UploadContent">
+                    <form style="display: flex; flex-direction: column;">
+                        <div style="display: flex; flex-direction: row;">
+                            <div style="display: flex; flex-direction: column;">
+                                <label for="nameUploadAdmin">Tên bài hát:</label>
+                                <input class="halfinputAdmin" type="text" id="nameUploadAdmin" placeholder="name...">
+                                <label for="authorUploadAdmin">Sáng tác:</label>
+                                <input class="halfinputAdmin" type="text" id="authorUploadAdmin"
+                                    placeholder="author...">
+                            </div>
+                            <div style="display: flex; flex-direction: column;">
+                                <label for="singerUploadAdmin">Ca sĩ:</label>
+                                <input class="halfinputAdmin" type="text" id="singerUploadAdmin"
+                                    placeholder="singer...">
+                                <label for="genreUploadAdmin">Thể loại:</label>
+                                <input class="halfinputAdmin" type="text" id="genreUploadAdmin" placeholder="genre...">
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column;">
+                            <label for="iframeUploadAdmin">Iframe Url:</label>
+                            <input class="longinputAdmin" type="text" id="iframeUploadAdmin" placeholder="iframeUrl...">
+                            <label for="lyricsUploadAdmin">Lời bài hát:</label>
+                            <textarea class="longtextareaAdmin" id="lyricsUploadAdmin"
+                                placeholder="lyrics..."></textarea>
+                        </div>
+                    </form>
+                    <p id="resultUploadAdmin"></p>
+                    <div id="buttonUploadAdmin" style="display: flex; flex-direction: row;">
+                        <button id="clearUploadAdmin" class="clearAdmin">Clear</button>
+                    </div>
+                    <select id="filterAdminUpload" form="filterForm" name="genreList">
+                        <option value="all">Tất cả</option>
+                        <option value="Chưa xem">Chưa xem</option>
+                        <option value="Đã xem">Đã xem</option>
+                    </select>
+                    <table class="tableContent">
+                        <tr>
+                            <th>Tên bài hát</th>
+                            <th>Chức năng</th>
+                        </tr>
+                    </table>
+                    <div id="changePageUpload" class="change">
+                        <p id="countPageUpload" class="countPage">1</p>
+                    </div>
+                </div>
+                <p id="noDataUpload" class="noData">Không có dữ liệu</p>
+            </div>
+
+            <!--Page Quản lý yêu cầu bài hát - Dương Thành Đạt-->
+            <div id="requestAdmin" class="contentAdmin">
+                <p class="titleContent">Quản lý yêu cầu bài hát</p>
+                <div id="RequestContent">
+                    <p id="resultRequestAdmin"></p>
+                    <table class="tableContent">
+                        <tr>
+                            <th>Tên bài hát</th>
+                            <th>Chức năng</th>
+                        </tr>
+                    </table>
+                    <div id="changePageRequest" class="change">
+                        <p id="countPageRequest" class="countPage">1</p>
+                    </div>
+                </div>
+                <p id="noDataRequest" class="noData">Không có dữ liệu</p>
+            </div>
+
+            <!--Page quản lý góp ý liên hệ - Dương Thành Đạt-->
+            <div id="suggestionAdmin" class="contentAdmin">
+                <p class="titleContent">Quản lý liên hệ góp ý</p>
+                <p>Nội dung:</p>
+                <div id="viewSuggestion" class="longtextareaAdmin">
+                </div>
+                <div id="SuggestionContent">
+                    <p id="resultSuggestionAdmin"></p>
+                    <select id="filterAdminSuggestion" form="filterForm" name="genreList">
+                        <option value="all">Tất cả</option>
+                        <option value="Chưa xem">Chưa xem</option>
+                        <option value="Đã xem">Đã xem</option>
+                    </select>
+                    <table class="tableContent">
+                        <tr>
+                            <th>Liên hệ / Góp ý</th>
+                            <th>Chức năng</th>
+                        </tr>
+                    </table>
+                    <div id="changePageSuggestion" class="change">
+                        <p id="countPageSuggestion" class="countPage">1</p>
+                    </div>
+                </div>
+                <p id="noDataSuggestion" class="noData">Không có dữ liệu</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hello, this is footer -->
+    <div id="footer">
+        <div id="infoLeft">
+            <li>
+                <i class="fab fa-app-store"></i>
+            </li>
+            <li>
+                <i class="fab fa-google-play"></i>
+            </li>
+            <li>
+                <i class="fab fa-facebook-square"></i>
+            </li>
+            <li>
+                <i class="fab fa-instagram"></i>
+            </li>
+        </div>
+        <li id="infoRight">
+            <p>
+                Powered by @nhom1
+                <br>
+                © 2021 thuvienamnhac.com. All rights reserved
+            </p>
+        </li>
+    </div>
+    <!--<script src="/DATA/data.js"></script> -->
+    <script src="./DATA/dataController.js"></script>
+    <script src="./Controllers/adminController.js"></script>
+    <script src="./Controllers/loginController.js"></script>
+    <script src="./Controllers/changePageController.js"></script>
+    <script src="./Controllers/changeString.js"></script>
+    <script src="./Controllers/userController.js"></script>
+</body>
+
+</html>
