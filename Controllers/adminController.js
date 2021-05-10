@@ -385,7 +385,6 @@ async function updateMusicAdmin(musicID) {
                     document.querySelector("#MusicContent form").reset();
                     setTimeout(() => {
                         resetMusicAdmin();
-                        document.getElementById("updateMusicAdmin").remove();
                     }, 1500);
                 }
             })
