@@ -92,6 +92,7 @@ async function getPageYT(loginState) {
     setPageNone();
     flexHTML("YTMusic");
     noneHTML("logoYT");
+    removeListHTML("#musicYeuThich li");
     document.getElementById("pageYTRight").style.width = "50%";
     if (loginState != -1) {
         let listMusicYeuThich = [];
