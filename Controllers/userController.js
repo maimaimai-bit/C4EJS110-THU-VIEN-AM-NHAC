@@ -117,6 +117,9 @@ function setViewSearch(e) {
             viewLogo.className = "viewLogo";
             viewIconsearch.className = "viewIconSearch " + viewIconsearch.className;
         }
+        document.getElementById("searchMusic").style.height = "0px";
+        removeListHTML("#searchMusic li");
+        document.getElementById("searchHomePage").value = "";
     }
 }
 
