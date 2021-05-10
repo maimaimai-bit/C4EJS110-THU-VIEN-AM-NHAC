@@ -24,7 +24,7 @@ body {
 
 #header a {
     background: #094c72;
-    color: white;
+    color: #e4f0f6;
     padding: 12px 15px 12px 15px;
     font-size: 15px;
 }
@@ -41,7 +41,7 @@ body {
 }
 
 .iconHeader:hover{
-    color: rgb(116, 171, 216);
+    color: #e4f0f6;
     cursor: pointer;
 }
 
@@ -58,13 +58,15 @@ body {
 }
 
 #header a:hover{
-    color: rgb(116, 171, 216);
+    transition: color 0.3s ease-out;
+    color: white;
     cursor: pointer;
 }
 
 #logo {
     font-weight: bold;
     cursor: pointer;
+    color: white !important;
 }
 
 #searchHomePage {
@@ -72,6 +74,7 @@ body {
     height: 22px;
     border-radius: 5px;
     padding: 8px;
+    background-color: #F9FBFB;
 }
 
 #searchMusic{
@@ -94,7 +97,7 @@ body {
 
 #searchMusic li:hover{
     cursor: pointer;
-    background: rgb(146, 184, 196);
+    background: #e4f0f6;
 }
 
 .nameSearch{
@@ -114,22 +117,26 @@ body {
     flex-direction: column;
     background-color: white;
     color: black;
-    margin-top: 18px;
+    margin-top: 13px;
     margin-left: -30px;
     box-sizing: content-box;
-    min-width: 120px;
+    min-width: 110px;
 }
 
 .theLoai li{
+    color: white;
+    background-color: #055a8c;
+    border-bottom: 0.5px solid #046299;
+    text-transform: capitalize;
+    font-size: 14px;
     padding-top: 5px;
     text-align: center;
     height: 30px;
-    box-shadow:  0 4px 8px 0 rgba(110, 131, 163, 0.2), 0 6px 20px 0 rgba(135, 190, 212, 0.19);
 }
 
 .theLoai li:hover{
     cursor: pointer;
-    background: rgb(146, 184, 196);
+    background:#036AA6;
 }
 
 .listMenu{
@@ -166,7 +173,7 @@ body {
 
 .account li:hover{
     cursor: pointer;
-    background: rgb(146, 184, 196);
+    background: #e4f0f6;
 }
 
 @media( max-width: 1200px){
@@ -300,10 +307,10 @@ body {
 }
 
 #banner {
-    background-image: url("https://i.imgur.com/rxh17is.jpg");
+    background-image: url("/projectCSS/C4EJS110-Thu-Vien-Am-Nhac/C4EJS110-THU-VIEN-AM-NHAC-main/IMAGE/banner.jpeg");
     margin-top: 0px;
     width: 100%;
-    height: 480px;
+    height: 550px;
     background-size: 100% 100%;
 }
 
@@ -330,16 +337,77 @@ body {
     display: flex;
 }
 
+#accountHPContent {
+    width: 23%;
+    margin: 40px 10px 30px 35px;
+}
+.accountHP {
+    height: 55px;
+}
+#accountPrompt {
+    font-size: 12.5px;
+    padding: 10px 15px;
+    text-align: center;
+}
+.flexcenter {
+    display: flex;
+    justify-content: center;
+}
+.flexcenter .button1 {
+    margin-right: 15px;
+    margin-left: -10px;
+}
+.column {
+    flex-direction: column;
+}
+#quote {
+    font-size: 17px;
+    padding: 30px 5px 15px 2px;
+    text-align: center;
+    font-style: italic;
+    color: #094c72;
+    background-image: url("https://www.onlygfx.com/wp-content/uploads/2019/03/14-white-grunge-brush-stroke-13.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#cite {
+    font-size: 15px;
+    text-align: right;
+    padding-right: 20px;
+    margin-top: -10px;
+    font-style: italic;
+    color: #055a8c;
+}
+#decorimg {
+    padding-top: 10px;
+    width: 95%;
+    text-align: center;
+    opacity: 0.75;
+    margin: auto;
+}
+#heartbeat {
+    padding-top: 15px;
+    font-size: 70px;
+    margin: auto;
+    color:#055a8c;
+    transition: color 0.5s ease;
+}
+.fa-heartbeat {
+    padding-left: 5px;
+}
+#heartbeat:hover {
+    color: #c21807;
+}
 .listHomePage{
-    width: 50%;
-    margin: 40px 20px 30px 10px;
+    width: 35%;
+    margin: 40px 10px 30px 10px;
 }
 
 .listHomePage img{
-    padding-top: 10px;
+    padding-top: 3px;
     margin: 20px auto;
-    width: 80%;
-    height: 75%;
+    width: 93%;
+    border-radius: 12px;
 }
 
 .headingclickable {
@@ -481,6 +549,12 @@ hr {
     cursor: pointer;
 }
 
+@media (max-width: 1200px) {
+    #banner {
+        background-size: 135% 100%;
+    }
+}
+
 @media( max-width: 900px){
     .homePageContent{
         flex-direction: column;
@@ -492,7 +566,7 @@ hr {
     }
     
     #banner {
-        background-size: 140% 100%;
+        background-size: 170% 100%;
     }
 
     #bannertext{
@@ -1529,3 +1603,111 @@ th, td {
     border-radius: 8px;
     outline: unset;
 }
+
+/* animation cho cac thu */
+ @-webkit-keyframes scale-up-ver-top {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }
+  @keyframes scale-up-ver-top {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }
+
+  .scale-up-ver-top {
+	-webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.heartbeat:hover {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+@-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  

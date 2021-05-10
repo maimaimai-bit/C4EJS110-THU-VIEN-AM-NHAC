@@ -344,7 +344,7 @@ function getGenreHomePage(listMusicsGenre = {}, loginState) {
     let listGenreID = document.getElementsByClassName("theLoai");
     for (let j = 0; j < 2; ++j) {
         for (let i in listMusicsGenre) {
-            listGenreID[j].insertAdjacentHTML('beforeend', `<li onclick = "getMusicsGenre('${listMusicsGenre[i][0].genre.toUpperCase()}', ${loginState})"> ${i}</li>`);
+            listGenreID[j].insertAdjacentHTML('beforeend', `<li onclick = "getMusicsGenre('${listMusicsGenre[i][0].genre.toUpperCase()}', ${loginState})"> ${i.toLowerCase()}</li>`);
         }
     }
 }
