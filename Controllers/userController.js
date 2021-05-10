@@ -183,7 +183,7 @@ async function getHomePage(loginState) {
                 if (xoa_dau(x.name).toLowerCase().search(keyWords.toLowerCase()) != -1 || xoa_dau(x.singer).toLowerCase().search(keyWords.toLowerCase()) != -1) {
                     document.getElementById("searchMusic").insertAdjacentHTML('beforeend', `
                     <li>
-                        <p class="nameSearch" onclick="getPageMusic(${x.id})">${x.name}</p>
+                        <p class="nameSearch" onclick="getPageMusic(${x.id}, ${loginState})">${x.name}</p>
                         <p class="singerSearch">${x.singer}</p>
                     </li>`);
                     count++;
