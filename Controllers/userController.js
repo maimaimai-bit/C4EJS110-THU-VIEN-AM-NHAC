@@ -676,6 +676,8 @@ for (let i = 0; i < 2; ++i) {
         processClickHomePage(-1);
         getResetHomePage(-1);
         blockHTML("homepage");
+        document.querySelector("#accountHPContent h1").style.display = "block";
+        blockHTML("accountHP");
     })
 }
 
