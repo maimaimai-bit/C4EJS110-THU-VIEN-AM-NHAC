@@ -117,6 +117,9 @@ function setViewSearch(e) {
             viewLogo.className = "viewLogo";
             viewIconsearch.className = "viewIconSearch " + viewIconsearch.className;
         }
+        document.getElementById("searchMusic").style.height = "0px";
+        removeListHTML("#searchMusic li");
+        document.getElementById("searchHomePage").value = "";
     }
 }
 
@@ -183,7 +186,7 @@ async function getHomePage(loginState) {
                 if (xoa_dau(x.name).toLowerCase().search(keyWords.toLowerCase()) != -1 || xoa_dau(x.singer).toLowerCase().search(keyWords.toLowerCase()) != -1) {
                     document.getElementById("searchMusic").insertAdjacentHTML('beforeend', `
                     <li>
-                        <p class="nameSearch" onclick="getPageMusic(${x.id})">${x.name}</p>
+                        <p class="nameSearch" onclick="getPageMusic(${x.id}, ${loginState})">${x.name}</p>
                         <p class="singerSearch">${x.singer}</p>
                     </li>`);
                     count++;
@@ -676,6 +679,8 @@ for (let i = 0; i < 2; ++i) {
         processClickHomePage(-1);
         getResetHomePage(-1);
         blockHTML("homepage");
+        document.querySelector("#accountHPContent h1").style.display = "block";
+        blockHTML("accountHP");
     })
 }
 

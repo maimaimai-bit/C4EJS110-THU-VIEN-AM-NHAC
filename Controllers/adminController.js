@@ -316,7 +316,8 @@ function addAdmin(namePage) {
             genre: genreUp.value,
             lyrics: lyricsUp.value,
             iframeUrl: iframeUp.value,
-            countSeen: Math.floor(Math.random() * 100)
+            countSeen: Math.floor(Math.random() * 100),
+            listUserYT : "yeuThich"
         }
         postData(musicUrl, data);
         document.getElementById(`result${namePage}Admin`).style.color = "green";
@@ -384,7 +385,6 @@ async function updateMusicAdmin(musicID) {
                     document.querySelector("#MusicContent form").reset();
                     setTimeout(() => {
                         resetMusicAdmin();
-                        document.getElementById("updateMusicAdmin").remove();
                     }, 1500);
                 }
             })
@@ -645,7 +645,7 @@ let logOut = document.getElementById("logOutAdminID");
 logOut.addEventListener('click', () => {
     setPageNone();
     setStyleChoose();
-    getResetHomePage();
+    getResetHomePage(-1);
     blockHTML("homepage");
     flexHTML("header");
     flexHTML("footer");

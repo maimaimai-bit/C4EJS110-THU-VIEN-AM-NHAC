@@ -9,7 +9,9 @@ body {
     font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
-
+input {
+    height: 25px;
+}
 
 /* Header*/
 
@@ -24,7 +26,7 @@ body {
 
 #header a {
     background: #094c72;
-    color: #e4f0f6;
+    color: white;
     padding: 12px 15px 12px 15px;
     font-size: 15px;
 }
@@ -41,7 +43,7 @@ body {
 }
 
 .iconHeader:hover{
-    color: #e4f0f6;
+    color: #5994c4;
     cursor: pointer;
 }
 
@@ -59,7 +61,7 @@ body {
 
 #header a:hover{
     transition: color 0.3s ease-out;
-    color: white;
+    color: #5994c4;
     cursor: pointer;
 }
 
@@ -67,6 +69,10 @@ body {
     font-weight: bold;
     cursor: pointer;
     color: white !important;
+}
+
+#logo:hover {
+    color: #5994c4 !important;
 }
 
 #searchHomePage {
@@ -111,13 +117,10 @@ body {
 
 .theLoai{
     list-style-type: none;
-    border-radius: 2px;
     position: absolute;
     display: none;
     flex-direction: column;
-    background-color: white;
-    color: black;
-    margin-top: 13px;
+    margin-top: 18px;
     margin-left: -30px;
     box-sizing: content-box;
     min-width: 110px;
@@ -125,8 +128,8 @@ body {
 
 .theLoai li{
     color: white;
-    background-color: #055a8c;
-    border-bottom: 0.5px solid #046299;
+    background-color: #094c72;
+    border-bottom: 0.5px solid #678da3;
     text-transform: capitalize;
     font-size: 14px;
     padding-top: 5px;
@@ -153,18 +156,19 @@ body {
 
 .account{
     list-style-type: none;
-    border-radius: 2px;
     position: absolute;
     display: none;
     flex-direction: column;
-    background-color: white;
-    color: black;
     margin-top: 18px;
     min-width: 200px;
     margin-left: -150px;
     box-sizing: content-box;
 }
 .account li{
+    color: white;
+    background-color: #094c72;
+    border-bottom: 0.5px solid #678da3;
+    text-transform: capitalize;
     padding-top: 5px;
     text-align: center;
     height: 30px;
@@ -173,7 +177,7 @@ body {
 
 .account li:hover{
     cursor: pointer;
-    background: #e4f0f6;
+    background:#036AA6;
 }
 
 @media( max-width: 1200px){
@@ -341,9 +345,11 @@ body {
     width: 23%;
     margin: 40px 10px 30px 35px;
 }
+
 .accountHP {
     height: 55px;
 }
+
 #accountPrompt {
     font-size: 12.5px;
     padding: 10px 15px;
@@ -415,7 +421,6 @@ body {
     font-size: 15px;
     font-weight: normal;
     text-align: center;
-    background: #f9f9f9;
     color: #094c72;
     padding-bottom: 5px;
 }
@@ -426,7 +431,6 @@ body {
 }
 
 .body {
-    width: auto;
     background: white;
     box-shadow: 0.5px 1.5px 1.5px 0px lightgray;
 }
@@ -555,6 +559,15 @@ hr {
     }
 }
 
+@media (max-width: 1100px) {
+    #accountHPContent{
+        display: none !important;
+    }
+    .listHomePage {
+        width: 50%;
+    }
+}
+
 @media( max-width: 900px){
     .homePageContent{
         flex-direction: column;
@@ -638,15 +651,17 @@ hr {
     width: 35%;
 }
 
-.pageMusicRight div{
+.pageMusicRight h1{
     margin-top: 20px;
+    margin-bottom: 5px;
 }
 
-#logoPageMusic{
+.logoPageMusic{
     text-align: center;
 }
 
 .pageMusicRight img{
+    margin-top: 20px;
     width: 60%;
 }
 
@@ -736,9 +751,11 @@ hr {
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
+    min-width: 130px;
 }
 
 .button2 {
+    min-width: 130px;
     background-color: #f9f9f9; 
     border: solid 2px;
     border-radius: 10px;
@@ -771,7 +788,7 @@ hr {
     overflow: auto;
     margin: auto;
     background: #f9f9f9;
-    padding-top: 50px;
+    padding-top: 75px;
 }
 
 /* dang bai hat */
@@ -892,7 +909,9 @@ hr {
 .fillImage img {
     width: 100%;
     margin-bottom: -3px;
+    border-top: 20px solid #f9f9f9;
 }
+
 .huongdan {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -907,7 +926,6 @@ hr {
     text-transform: uppercase;
     font-size: 15px;
     text-align: center;
-    background: #f9f9f9;
     color: #094c72;
     padding-bottom: 5px;
     font-weight: bold;
