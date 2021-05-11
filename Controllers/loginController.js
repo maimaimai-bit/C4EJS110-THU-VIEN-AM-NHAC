@@ -166,6 +166,9 @@ async function processPageYT(musicID, loginState, indexLi) {
         i++;
     }
     musicUpdate.listUserYT = musicUpdate.listUserYT.replace(` songYT${loginState}`, "");
+    if(listLiYT[0] == undefined){
+        document.getElementById("countMusicYT").style.display = "block";
+    }
     updateData(musicUrl, musicID, musicUpdate);
 }
 
