@@ -655,6 +655,18 @@ async function processSignup() {
     else if (usernameSignup.value == "" || emailSignup.value == "" || passwordSignup.value == "") {
         signupResult.textContent = "Cần nhập đủ các trường!";
     }
+    else if (!emailSignup.value.includes("@gmail.com")){
+        signupResult.textContent = "Email không hợp lệ!";
+    }
+    else if(usernameSignup.value.length < 7){
+        signupResult.textContent = "Tài khoản tối thiểu 6 kí tự";
+    }
+    else if(passwordSignup.value.length < 6){
+        signupResult.textContent = "Mật khẩu tối thiểu 6 kí tự";
+    }
+    else if (usernameSignup.value.includes(" ") || emailSignup.value.includes(" ") || passwordSignup.value.includes(" ")){
+        signupResult.textContent = "Các trường không được chứa kí tự đặc biệt!";
+    }
     else {
         let newUser = {
             userName: `${usernameSignup.value}`,
