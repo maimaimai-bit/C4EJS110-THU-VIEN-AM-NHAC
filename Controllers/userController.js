@@ -548,7 +548,7 @@ for (let i = 0; i < 2; ++i) {
         let subjectSuggestion = document.getElementById("subjectSuggestion");
         let contentSuggestion = document.getElementById("contentSuggestion");
         let resultSuggestion = document.getElementById("suggestionResult");
-        if (emailSuggestion.value == "" || contentSuggestion.value == "") {
+        if (emailSuggestion.value == "" || subjectSuggestion.value == "" || contentSuggestion.value == "") {
             resultSuggestion.style.color = "red";
             resultSuggestion.textContent = "Bắt buộc phải điền trường có dấu (*)";
         }
