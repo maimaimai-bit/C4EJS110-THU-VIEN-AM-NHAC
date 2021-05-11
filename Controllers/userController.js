@@ -656,7 +656,7 @@ async function processSignup() {
         document.querySelector("#signup form").reset();
         setTimeout(() => {
             noneHTML("dangky");
-            flexHTML("dangnhap");
+            blockHTML("dangnhap");
             signupResult.textContent = "";
         }, 1000)
     }
@@ -689,7 +689,7 @@ async function processYT(idMusic, loginState) {
     let listMusics = await response.json();
     if (loginState == -1) {
         setPageNone();
-        flexHTML("dangnhap");
+        blockHTML("dangnhap");
     }
     else {
         let index = 0;
