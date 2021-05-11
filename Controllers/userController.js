@@ -293,7 +293,7 @@ function getMusicsDB(listMusics = [], contentHTMLID, countPage, loginState) {
             listMusicsID.insertAdjacentHTML('beforeend', `<li id="${i+1}">
             <p class="sttMusic">${i + 1}.</p>
             <p class="name" onclick="getMusicYT(${listMusics[i].id})">${listMusics[i].name}</p>
-            <p class="${listMusics[i].id} ${listMusics[i].listUserYT}" style="font-size: 25px !important;"> <i class="icon${listMusics[i].id} far fa-heart" onclick="processPageYT(${listMusics[i].id}, ${loginState},${i+1})"></i> </p><br>
+            <p class="${listMusics[i].id} ${listMusics[i].listUserYT}" style="font-size: 25px !important;"> <i class="icon${listMusics[i].id} fa fa-close" onclick="processPageYT(${listMusics[i].id}, ${loginState},${i+1})"></i> </p><br>
             <p class="singer">${listMusics[i].singer}</p>
             <hr></li>`);
             if (i == listMusics.length - 1) {
