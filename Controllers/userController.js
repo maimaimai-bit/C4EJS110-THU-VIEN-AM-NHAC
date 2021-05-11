@@ -459,6 +459,10 @@ for (let i = 0; i < 2; ++i) {
         blockHTML("dangbaihat");
     })
     let addUploadID = document.getElementById("addUpload");
+    if(addUploadID != undefined) addUploadID.remove();
+    let addUploadUser = document.getElementById("addUploadUser");
+    addUploadUser.insertAdjacentHTML('beforeend', `<button id="addUpload" class="button1">Đăng bài hát</button>`);
+    addUploadID = document.getElementById("addUpload");
     addUploadID.addEventListener('click', () => {
         let nameUpload = document.getElementById("nameUpload");
         let authorUpload = document.getElementById("authorUpload");
@@ -502,6 +506,10 @@ for (let i = 0; i < 2; ++i) {
         blockHTML("yeucaubaihat");
     })
     let addRequestID = document.getElementById("addRequest");
+    if(addRequestID != undefined) addRequestID.remove();
+    let addRequestUser = document.getElementById("addRequestUser");
+    addRequestUser.insertAdjacentHTML(`beforeend`, `<button id="addRequest" class="button1">Yêu cầu bài hát</button>`);
+    addRequestID = document.getElementById("addRequest");
     addRequestID.addEventListener('click', () => {
         let nameRequest = document.getElementById("nameRequest");
         let singerAuthorRequest = document.getElementById("singerAuthorRequest");
@@ -531,6 +539,10 @@ for (let i = 0; i < 2; ++i) {
         blockHTML("lienhegopy");
     })
     let addSuggestionID = document.getElementById("addSuggestion");
+    if (addSuggestionID != undefined) addSuggestionID.remove();
+    let addSuggestionUser = document.getElementById("addSuggestionUser");
+    addSuggestionUser.insertAdjacentHTML(`beforeend`, `<button id="addSuggestion" class="button1">Gửi thư</button>`);
+    addSuggestionID = document.getElementById("addSuggestion");
     addSuggestionID.addEventListener('click', () => {
         let emailSuggestion = document.getElementById("emailSuggestion");
         let subjectSuggestion = document.getElementById("subjectSuggestion");
