@@ -889,6 +889,10 @@ hr {
     }
 }
 
+.fillImage img {
+    width: 100%;
+    margin-bottom: -3px;
+}
 .huongdan {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -1145,7 +1149,7 @@ input:hover, textarea:hover{
 
 /* dangnhap*/
 @media screen and (min-width: 480px){
-    #dangnhap{
+    #dangnhapflex{
         flex-direction: column;
     }
 
@@ -1163,13 +1167,13 @@ input:hover, textarea:hover{
     }
 }
 @media screen and (min-width: 800px){
-    #dangnhap {
+    #dangnhapflex {
         display: flex;
         justify-content: center;
         flex-direction: row-reverse;
     }
 
-    #dangnhap .huongdan {
+    #dangnhapflex .huongdan {
         float: right;
         width: 375px;
         margin: 20px 20px 20px 0px;
@@ -1182,11 +1186,11 @@ input:hover, textarea:hover{
     }
 }
 @media screen and (min-width: 480px) and (max-width: 799px) {
-    #dangnhap{
+    #dangnhapflex{
         flex-direction: column;
     }
 
-    #dangnhap .huongdan {
+    #dangnhapflex .huongdan {
         margin: auto;
         width: 375px;
     }
@@ -1197,11 +1201,11 @@ input:hover, textarea:hover{
     }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
-    #dangnhap{
+    #dangnhapflex{
         flex-direction: column;
     }
 
-    #dangnhap .huongdan {
+    #dangnhapflex .huongdan {
         margin: auto;
         width: 88%;
     }
@@ -1273,10 +1277,9 @@ input:hover, textarea:hover{
 
 /* dang ky */
 @media screen and (min-width: 480px){
-    #dangky{
+    #dangkyflex{
         flex-direction: column;
     }
-
     .inputFillShort {
         width: 65%;
         margin: 0px 0px 10px 15px;
@@ -1291,13 +1294,13 @@ input:hover, textarea:hover{
     }
 }
 @media screen and (min-width: 800px){
-    #dangky {
+    #dangkyflex {
         display: flex;
         justify-content: center;
         flex-direction: row-reverse;
     }
 
-    #dangky .huongdan {
+    #dangkyflex .huongdan {
         float: right;
         width: 375px;
         margin: 20px 20px 20px 0px;
@@ -1310,11 +1313,11 @@ input:hover, textarea:hover{
     }
 }
 @media screen and (min-width: 480px) and (max-width: 799px) {
-    #dangky{
+    #dangkyflex{
         flex-direction: column;
     }
 
-    #dangky .huongdan {
+    #dangkyflex .huongdan {
         margin: auto;
         width: 375px;
     }
@@ -1325,16 +1328,16 @@ input:hover, textarea:hover{
     }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
-    #dangky{
+    #dangkyflex{
         flex-direction: column;
     }
 
-    #dangky .huongdan {
+    #dangkyflex .huongdan {
         margin: auto;
         width: 88%;
     }
 
-    #dangky {
+    #dangkyflex {
         margin: auto;
         width: 88%;
     }

@@ -602,11 +602,11 @@ for (let i = 0; i < 2; ++i) {
 
 let signupID = document.getElementsByClassName("signupID");
 
-
 for (let i = 0; i < signupID.length; ++i) {
     signupID[i].addEventListener('click', () => {
         setPageNone();
-        flexHTML("dangky");
+        blockHTML("dangky");
+        imageDangNhap.style.display = "block";
     })
 }
 

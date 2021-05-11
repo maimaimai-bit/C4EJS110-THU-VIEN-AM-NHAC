@@ -1,11 +1,13 @@
 //  process login
 
 let loginID = document.getElementsByClassName("loginID");
+let imageDangNhap = document.getElementById("imageDangNhap");
 
 for (let i = 0; i < 3; ++i) {
     loginID[i].addEventListener('click', () => {
         setPageNone();
-        flexHTML("dangnhap");
+        blockHTML("dangnhap");
+        imageDangNhap.style.display = "block";
     })
 }
 
