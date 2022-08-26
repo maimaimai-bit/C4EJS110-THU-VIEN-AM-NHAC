@@ -1,5 +1,5 @@
 # thu-vien-am-nhac
-Github page: https://maimaimai-bit.github.io/thu-vien-am-nhac/
+Github page: https://maimaimai-bit.github.io/thu-vien-am-nhac/ <br />
 A music website demo with various admin and user features; final group project from MindX's Intro to Web Development Bootcamp (4/2021 - Hanoi, Vietnam). 
 
 Website was build using HTML, CSS and Javascript (no framework). Our database is managed through mockAPI.io. Our main features include: <br />
